@@ -1,0 +1,12 @@
+.basket{
+    z-Index: 1;
+    position: 'relative';
+    width:200px;
+    height:150px;
+    .apple {
+        &:hover{
+          cursor: pointer;
+          filter: brightness(150%);
+        }
+      }
+}
