@@ -55,6 +55,6 @@ Now you're ready build your beautiful React Application!
 
 ## License
 
-MIT license, Copyright (c) 2019 yiyi45.
+MIT license, Copyright (c) 2019 setax.
 # react-shake-tree
 
