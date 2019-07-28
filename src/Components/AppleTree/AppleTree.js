@@ -27,23 +27,22 @@ class AppleTree extends React.Component {
     startDropping() {
         // All apples will drop in different times
         const {basket, apples} = this.props;
-        let length = apples.length * Math.random() + 1;  //number of apples that will fall
-        length = length > apples.length ? (apples.length) : (length); 
-        for (let i = 0; i < length; i++) {
+        let length = Math.floor(Math.random() * apples.length)  //number of apples that will fall
+        Array(length).fill().map((item,index) => {
             let time = ((Math.random() * length) / 2) * 1000;
-            let apple = $('.Tree .apple:eq(' + i + ')');
+            let apple = $('.Tree .apple:eq(' + index + ')');
             // drop apple to ground
             apple.animate({
                 top: '100%'  //apples on the floor
             }, time, () => {
                 setTimeout(() => {
                     apple.remove(); 
-                    basket.push(i); //apple on the basket
+                    basket.push(index); //apple on the basket
                     setBasket([...basket]); //set basket state
                 }, 1000);
             });
-
-        }
+            return true;
+        })
 
     }
 
