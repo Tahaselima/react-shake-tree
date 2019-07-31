@@ -15,7 +15,6 @@ class Basket extends React.Component
 
     render() {
         const {basket} = this.props;
-
         return(
             <div className={"basket"}>
                 <div className="apples">
