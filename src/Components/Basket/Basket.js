@@ -22,7 +22,7 @@ class Basket extends React.Component
                     {basket.length > 0 &&
                         // Place apples in basket
                     _.map(basket, (index,indis) =>
-                        <Apple key={index} style={{top: `${((indis - indis % 5) / 5 * 15) + 23}%`,left:`${((indis % 5) * 11) + 20}%`,zIndex: 3}} />)
+                        <Apple key={index} style={{top: `${100 - ((indis - indis % 5) / 5 * 15) - 50}%`,left:`${((indis % 5) * 11) + 20}%`,zIndex: 3}} />)
                     }
                 </div>
             </div>
